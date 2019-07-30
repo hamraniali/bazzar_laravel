@@ -13,7 +13,7 @@ class HomeController extends Controller
      *
      * @return \Illuminate\Http\Response
      */
-    public function index()
+    public function bestGames()
     {
         $bestGames = DB::table('apps')->where('type' , 'game')->orderBy('downloadCount','desc')->limit(17)->get();
         $bestSofts = DB::table('apps')->where('type' , 'soft')->orderBy('downloadCount','desc')->limit(17)->get();
